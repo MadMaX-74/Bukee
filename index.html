@@ -18,23 +18,27 @@
                 <div class="header">
                     <a href="#" class="header__logo"></a>
                     <!-- /.header__logo -->
+                    <a href="#" class="menu-btn">
+                        <span><i class="fas fa-bars"></i></span>
+                    </a>
                     <ul class="header-list">
-                        <li class="header-list__item active"><a href="#" class="header-list__link">Home</a> </li>
-                        <li class="header-list__item"><a href="#" class="header-list__link">About</a></li>
-                        <li class="header-list__item"><a href="#" class="header-list__link">Contens</a></li>
+                        <li class="header-list__item"><a href="#home" class="header-list__link">Home</a> </li>
+                        <li class="header-list__item"><a href="#about" class="header-list__link">About</a></li>
+                        <li class="header-list__item"><a href="#contens" class="header-list__link">Contens</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Books</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Education</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Skills</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Portfolio</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Clients</a></li>
                         <li class="header-list__item"><a href="#" class="header-list__link">Contact</a></li>
+                        <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
                     </ul>
                     <!-- /.header-list -->
                 </div>
                 <!-- /.header -->
             </div>
         </header>
-        <div class="wrap wrap--light">
+        <div class="wrap wrap--light" id='home'>
             <div class="block-book">
                 <div class="block-book-demo">
                     <h2 class="block-book-demo__title">Good Book <span>Don’t judge a book by its cover</span> </h2>
@@ -62,7 +66,7 @@
         </div>
     </div>
     <!-- /.page-main -->
-    <section class="book-author">
+    <section class="book-author" id="about">
         <div class="wrap">
             <div class="block-author">
                 <div class="block-text">
@@ -101,7 +105,7 @@
         <!-- /.wrap -->
     </section>
     <!-- /.book-author -->
-    <section class="page-book">
+    <section class="page-book" id="contens">
         <div class="wrap">
             <div class="book-contents">
                 <div class="block-text book-contents_text">
@@ -362,7 +366,7 @@
         <div class="wrap">
             <div class="block-footer">
                 <div>
-                    <a href="#" class="block-footer__logo"><img src="img/logo2.png" alt=""></a>
+                    <a href="#" class="block-footer__logo"><img src="../img/logo2.png" alt=""></a>
                     <p class="block-footer__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <p class="block-footer__copy">© 2018 Bukee Private Limited.</p>
                 </div>
@@ -418,6 +422,17 @@
             $('#bookBtn').click(function(){
                 $('#bookList').fadeIn();
                 $('#bookBtn').fadeOut();
+            });
+
+
+            $('.menu-btn').click(function(){
+                $('.header-list').addClass('active-menu');                
+            });
+            $('.close-btn').click(function(){
+                $('.header-list').removeClass('active-menu');                
+            });
+            $('.header-list__item').click(function(){
+                $('.header-list').removeClass('active-menu');                
             });
         });
     </script>
