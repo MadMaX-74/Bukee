@@ -1,2 +1,2 @@
 # Bukee
-Bukee web-site
+Bukee web-site - верстка страницы
